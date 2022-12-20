@@ -6,11 +6,11 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather defaultCity="New York" />
+        <Weather defaultCity="Lviv" />
         <footer>
-          This project was coded by Cedra Wilson and is{" "}
+          This project was coded by Tetiana Lych and is{" "}
           <a
-            href="https://github.com/rasheedawilson12/shecodes-react-weather-app.git"
+            href="https://github.com/LychTetiana/shecodes-react-weather-app-main"
             target="_blank"
             rel="noreferrer"
           >
