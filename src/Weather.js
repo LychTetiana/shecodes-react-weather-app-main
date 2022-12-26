@@ -32,7 +32,7 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = "ad793a6d772939c31783de5822791acf";
+    const apiKey = "894a2e7aa7f46eeca5d8778f6faa5a5b";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
@@ -52,6 +52,13 @@ export default function Weather(props) {
                 onChange={updateCity}
               />
             </div>
+
+
+
+
+
+
+            
             <div className="col-3">
               <input
                 type="submit"
