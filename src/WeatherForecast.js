@@ -1,47 +1,32 @@
-import React, { useState, useEffect } from "react";
-import WeatherForecastDay from "./WeatherForecastDay";
+import React from "react";
+import WeatherIcon from "./WeatherIcon";
 import "./WeatherForecast.css";
 import axios from "axios";
 
 export default function WeatherForecast(props) {
-  let [loaded, setLoaded] = useState(false);
-  let [forecast, setForecast] = useState(null);
-
-  useEffect(() => {
-    setLoaded(false);
-  }, [props.coordinates]);
-
   function handleResponse(response) {
-    setForecast(response.data.daily);
-    setLoaded(true);
+    console.log(response.data);
   }
 
-  if (loaded) {
-    return (
-      <div className="WeatherForecast">
-        <div className="row">
-          {forecast.map(function (dailyForecast, index) {
-            if (index < 5) {
-              return (
-                <div className="col" key={index}>
-                  <WeatherForecastDay data={dailyForecast} />
-                </div>
-              );
-            } else {
-              return null;
-            }
-          })}
+  let apiKey = "a1357df929ebtfc24fcd7f75o52d3097";
+  let longitude = props.coordinates.lon;
+  let latitude = props.coordinates.lat;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(handleResponse);
+
+  return (
+    <div className="WeatherForecast">
+      <div className="row">
+        <div className="col">
+          <div className="WeatherForecast-day">Thu</div>
+          <WeatherIcon code="01d" size={35} />
+          <div className="WeatherForecast-temperatures">
+            <span className="WeatherForecast-temperature-max">19°</span>
+            <span className="WeatherForecast-temperature-min">10°</span>
+          </div>
         </div>
       </div>
-    );
-  } else {
-    let apiKey = "ad793a6d772939c31783de5822791acf";
-    let longitude = props.coordinates.lon;
-    let latitude = props.coordinates.lat;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-
-    axios.get(apiUrl).then(handleResponse);
-
-    return null;
-  }
+    </div>
+  );
 }
