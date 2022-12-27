@@ -8,15 +8,24 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="Lviv" />
         <footer>
-          This project was coded by Tetiana Lych and is{" "}
+        This project was coded by{" "}
+          <a href="https://www.linkedin.com/in/tetiana-lych/" target="_blank">
+            Tetiana Lych
+          </a>{" "}
+          and is{" "}
           <a
-            href="https://github.com/LychTetiana/shecodes-react-weather-app-main"
+            href="https://github.com/LychTetiana/shecodes-react-weather-app-main.git"
             target="_blank"
-            rel="noreferrer"
           >
             open-sourced on GitHub
+          </a>{" "}
+          and{" "}
+          <a
+            href=""
+            target="_blank"
+          >
+            hosted on Netlify
           </a>
-          .
         </footer>
       </div>
     </div>
