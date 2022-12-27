@@ -24,7 +24,7 @@ export default function App() {
           </a>{" "}
           and{" "}
           <a
-            href="http://localhost:3000/"
+            href="https://playful-maamoul-124c9f.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
           >
