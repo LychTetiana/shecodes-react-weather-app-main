@@ -9,13 +9,16 @@ export default function App() {
         <Weather defaultCity="Lviv" />
         <footer>
         This project was coded by{" "}
-          <a href="https://www.linkedin.com/in/tetiana-lych/" target="_blank">
+          <a href="https://www.linkedin.com/in/tetiana-lych/" 
+          target="_blank"
+          rel="noopener noreferrer">
             Tetiana Lych
           </a>{" "}
           and is{" "}
           <a
             href="https://github.com/LychTetiana/shecodes-react-weather-app-main.git"
             target="_blank"
+            rel="noopener noreferrer"
           >
             open-sourced on GitHub
           </a>{" "}
@@ -23,6 +26,7 @@ export default function App() {
           <a
             href=""
             target="_blank"
+            rel="noopener noreferrer"
           >
             hosted on Netlify
           </a>
