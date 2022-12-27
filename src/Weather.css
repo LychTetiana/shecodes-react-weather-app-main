@@ -1,10 +1,11 @@
 .Weather {
+ background-image: url("https://static8.depositphotos.com/1573188/1037/i/450/depositphotos_10376451-free-stock-photo-stone-the-cloud-and-in.jpg");
   border: 1px solid #dadde1;
   font-family: arial, sans-serif;
   padding: 16px;
   margin: 30px auto;
   border-radius: 5px;
-  color: rgb(135, 135, 135);
+  color: rgb(255, 255, 255);
 }
 
 .Weather form {
@@ -40,7 +41,7 @@
   width: 64px;
 }
 .Weather .temperature {
-  color: rgb(33, 33, 33);
+  color: rgb(255, 255, 255);
   font-size: 64px;
   line-height: 64px;
   font-weight: 400;
@@ -51,4 +52,11 @@
   font-size: 16px;
   top: -34px;
   margin-left: 5px;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #75819C;
+  --bs-btn-border-color: #ffffff;
+  --bs-btn-hover-bg: #cdd1d6;
 }
