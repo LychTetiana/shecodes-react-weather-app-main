@@ -53,12 +53,6 @@ export default function Weather(props) {
               />
             </div>
 
-
-
-
-
-
-            
             <div className="col-3">
               <input
                 type="submit"
