@@ -24,7 +24,7 @@ export default function App() {
           </a>{" "}
           and{" "}
           <a
-            href=""
+            href="http://localhost:3000/"
             target="_blank"
             rel="noopener noreferrer"
           >
